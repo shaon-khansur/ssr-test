@@ -1,0 +1,43 @@
+.container {
+  padding: 4rem;
+}
+
+.grid {
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(400px, auto);
+  gap: 2rem;
+}
+
+.video-card {
+  cursor: pointer;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.video-card:hover {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+video {
+  width: 400px;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  margin-left: 4rem;
+  border-radius: 5px;
+  width: 50%;
+  padding: 1rem;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
