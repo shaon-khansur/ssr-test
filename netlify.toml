@@ -1,4 +1,8 @@
 [build]
-  command = "npm run build && npm run prerender"
+  command = "npm run build:ssr"
   functions = "./functions"
   publish = "dist/test/server"
+[[redirects]]
+  from = "/*"
+  to = "/main.js"
+  status = 200
