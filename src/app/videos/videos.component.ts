@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ViedoService } from '../service/video-service/viedo.service';
 import { Observable, Subject, debounceTime, takeUntil, tap } from 'rxjs';
 import { Video } from '../models/video';
@@ -9,9 +9,9 @@ import { FormControl } from '@angular/forms';
   templateUrl: './videos.component.html',
   styleUrls: ['./videos.component.css'],
 })
-export class VideosComponent implements OnInit {
+export class VideosComponent implements OnInit, OnDestroy {
   allVideos$: Observable<Video[]> | undefined;
-  unsubscribe$ = new Subject();
+  unsubscribe$ = new Subject<boolean>();
   public inputControl = new FormControl();
 
   constructor(private videoService: ViedoService) {}
@@ -38,4 +38,10 @@ export class VideosComponent implements OnInit {
         }
       });
   }
+
+  ngOnDestroy(): void {
+      this.unsubscribe$.next(true);
+      this.unsubscribe$.complete();
+  }
+
 }
