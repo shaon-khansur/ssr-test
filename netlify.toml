@@ -1,2 +1,8 @@
 [build]
   command = "npm run build:ssr && npm run serve:ssr"
+  functions = "./functions"
+  publish = "dist/test/server/main.js"
+[[redirects]]
+  from = "/*"
+  to = "/main.js"
+  status = 200
