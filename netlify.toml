@@ -1,5 +1,5 @@
 [build]
-  command = "ng build && ng run test:server"
+  command = "npm run build:ssr"
   functions = "./functions"
   publish = "dist/test/browser"
 [[redirects]]
