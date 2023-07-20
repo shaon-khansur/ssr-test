@@ -1,8 +1,8 @@
 [build]
   command = "ng build && ng run test:server"
   functions = "./functions"
-  publish = "dist/test/server/main.js"
+  publish = "dist/test/browser"
 [[redirects]]
   from = "/*"
-  to = "/main.js"
+  to = "/index.html"
   status = 200
