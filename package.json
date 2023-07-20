@@ -10,7 +10,8 @@
     "dev:ssr": "ng run test:serve-ssr",
     "serve:ssr": "node dist/test/server/main.js",
     "build:ssr": "ng build && ng run test:server",
-    "prerender": "ng run test:prerender"
+    "prerender": "ng run test:prerender",
+    "vercel-build": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
