@@ -1,8 +1,0 @@
-[build]
-  command = "npm run build:ssr"
-  functions = "./functions"
-  publish = "dist/test/browser"
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
