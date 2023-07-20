@@ -7,6 +7,7 @@ import { VideoComponent } from './video/video.component';
 import { ViedoService } from './service/video-service/viedo.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {provideClientHydration} from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [ViedoService],
+  providers: [ViedoService, provideClientHydration()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

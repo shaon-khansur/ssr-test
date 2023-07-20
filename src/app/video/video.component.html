@@ -1,16 +1,7 @@
 <div class="video-container">
-  <ng-container *ngIf="video$ | async as video">
-    <div class="video-player">
-      <video controls [src]="video.videoUrl"></video>
-      <h3>{{ video.title }}</h3>
-    </div>
-  </ng-container>
-  <div class="video-list">
-    <ng-container *ngFor="let video of videos$ | async">
-      <a class="video-thumbnail" [routerLink]="['/videos', video.id]">
-        <img [src]="video.thumbnailUrl" alt="Video Thumbnail 1" />
-        <h3>{{ video.title }}</h3>
-      </a>
-    </ng-container>
-  </div>
+  <ul>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+  </ul>
 </div>
